@@ -2,20 +2,20 @@
 % Please edit documentation in R/doitall4cygwin.r
 \name{doitall4cyg}
 \alias{doitall4cyg}
-\title{doitall4cygwin.r
-doitall4cyg() converts a windows-exec doitall to a unix version}
+\title{Conversion of MFCL doitall from DOS to Unix format}
 \usage{
-doitall4cyg(x)
+doitall4cyg(x, keep.condor = FALSE)
 }
 \arguments{
 \item{x}{file name for doitall to convert}
+
+\item{keep.condor}{if FALSE (the default), will remove the 3 CONDOR header lines if present}
 }
 \description{
-doitall4cygwin.r
-doitall4cyg() converts a windows-exec doitall to a unix version
+Converts a windows-exec doitall to a unix version, saved as input file with extension .cyg;
+also does carriage switch from Dos to Unix format
 }
 \author{
 Laura Tremblay-Boyer (lauratb@spc.int)
-doitall4cyg()
 }
 \keyword{mfcl}
