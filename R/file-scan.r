@@ -4,13 +4,13 @@
 #' @param pattern pattern to look for (can be regexp)
 #' @param dir directory to search files in, defaults to working directory
 #' @param fpattern file extension pattern (optional)
-#' @param ftype defaults to R files
+#' @param ftype defaults to R files, accepts regular expressions
 #' @param show.line if TRUE, prints out the line where the pattern is found
 #' @keywords search
 #' @export
 #' @examples
 #' file.scan
-file.scan <- function(pattern, dir=getwd(), fpattern=NA, ftype=".r$|.R$", show.line=FALSE) {
+file.scan <- function(pattern, dir=getwd(), fpattern=NA, ftype="\\.r$|\\.R$", show.line=FALSE) {
 
     nfiles <- list.files(dir,full.names=TRUE)
     if(!is.na(fpattern)) nfiles <- nfiles[grep(fpattern, nfiles)]
